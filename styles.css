@@ -1,0 +1,65 @@
+.boxes {
+    background-color: rgb(144, 17, 234);
+    display: flex;
+    width: auto;
+    height: 100vh;
+}
+
+.box {
+    background-color: rgb(108, 31, 163);
+    width: 100%;
+    height: 100%;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+[data-key='0'],
+[data-key='1'],
+[data-key='2'],
+[data-key='3'],
+[data-key='4'],
+[data-key='5'],
+[data-key='6'],
+[data-key='7'],
+[data-key='8'],
+[data-key='9'] {
+    display: none;
+    animation-name: slideout;
+    animation-duration: .6s;
+}
+
+.upper-text {
+    animation-duration: 0.5s;
+    animation-name: slidein;
+    animation-direction: alternate;
+}
+
+@keyframes slidein {
+    from {
+        margin-top: 100%;
+        width: 300%;
+    }
+    to {
+        margin-bottom: 0%;
+        width: 100%;
+    }
+}
+
+@keyframes slideout {
+    from {
+        margin-left: 100%;
+        width: 100%;
+    }
+    to {
+        margin-right: 100%;
+        width: 300%;
+    }
+}
